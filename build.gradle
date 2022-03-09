@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+     mavenCentral()
+    //mavenLocal()
+   // jcenter()
+}
+
+dependencies {
+      testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+   //cucumber-selenium-java dependencies
+    implementation 'io.cucumber:cucumber-java:7.2.3'
+
+    implementation 'io.cucumber:cucumber-core:7.2.3'
+
+    implementation 'io.cucumber:cucumber-gherkin:7.2.3'
+
+    compileOnly 'io.cucumber:cucumber-jvm-deps:1.0.6'
+
+    implementation 'net.masterthought:cucumber-reporting:5.6.1'
+
+    testImplementation 'io.cucumber:cucumber-junit:7.2.3'
+
+    implementation 'org.seleniumhq.selenium:selenium-java:4.1.2'
+
+
+}
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+test {
+   // useJUnitPlatform()
+   manifest {
+       attributes 'Main-Class': 'runner.TestRunner'
+   }
+}
+
+task cucumberTest() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            // systemProperties['configFileName'] = "env0_config.properties" (this is required for changing the environment in future)
+            //systemProperties['browser'] = browser
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'rerun:target/failed.txt',
+                    '--glue', 'test.java.stepdefinition',
+                    '--threads', 2,
+                    '--tags', "${tags}",
+                    'src/test/resources']
+        }
+    }
+}
