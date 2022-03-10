@@ -2,7 +2,7 @@ package configurations;
 
 import org.openqa.selenium.WebDriver;
 
-public class WebDriverExecutor {
+public class ParallelExecutor {
     private static final ThreadLocal<WebDriver> webDriver=new ThreadLocal<WebDriver>();
 
     public static void setWebDriver(WebDriver driver){
