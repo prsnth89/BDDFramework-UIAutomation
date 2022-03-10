@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Navigate to amazon" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-09T14:26:05" hostname="LAPTOP-62EKUM01" time="33.991">
+<testsuite name="Navigate to amazon" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-10T12:57:47" hostname="LAPTOP-62EKUM01" time="122.842">
   <properties/>
-  <testcase name="amazon" classname="Navigate to amazon" time="33.991"/>
+  <testcase name="amazon" classname="Navigate to amazon" time="122.842"/>
   <system-out><![CDATA[
 @amazon
 Scenario Outline: amazon                              ?[90m# src/test/resources/amazon/Test1.feature:9?[0m
@@ -13,16 +13,16 @@ Navigated to url successfully
   <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 59349
+Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 58608
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1646835970.147][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
-Mar 09, 2022 3:26:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1646917120.575][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
+Mar 10, 2022 1:58:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Mar 09, 2022 3:26:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Mar 10, 2022 1:58:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-Mar 09, 2022 3:26:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Mar 10, 2022 1:58:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
 </testsuite>

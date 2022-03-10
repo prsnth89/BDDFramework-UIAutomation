@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Navigate to google" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-09T14:26:39" hostname="LAPTOP-62EKUM01" time="5.274">
+<testsuite name="Navigate to google" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-10T12:59:50" hostname="LAPTOP-62EKUM01" time="37.043">
   <properties/>
-  <testcase name="google" classname="Navigate to google" time="5.274"/>
+  <testcase name="google" classname="Navigate to google" time="37.043"/>
   <system-out><![CDATA[
 @google
 Scenario Outline: google                              ?[90m# src/test/resources/google/Test2.feature:10?[0m
@@ -10,16 +10,16 @@ Navigated to url successfully
   ?[32mThen ?[0m?[32mnavigate to given url ?[0m?[32m?[1m"https://www.google.com"?[0m ?[90m# stepdefinitions.StepDefinition.navigate_to_given_url(java.lang.String)?[0m
   ?[32mAnd ?[0m?[32mclose the browser?[0m                               ?[90m# stepdefinitions.StepDefinition.close_the_browser()?[0m
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 64326
+  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 51615
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1646836001.732][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
-Mar 09, 2022 3:26:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1646917221.306][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
+Mar 10, 2022 2:00:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-Mar 09, 2022 3:26:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Mar 10, 2022 2:00:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
-Mar 09, 2022 3:26:42 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Mar 10, 2022 2:00:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 INFO: Found CDP implementation for version 99 of 97
 ]]></system-err>
 </testsuite>

@@ -12,8 +12,8 @@ repositories {
 }
 
 dependencies {
-      testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+  //    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+  //   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
    //cucumber-selenium-java dependencies
     implementation 'io.cucumber:cucumber-java:7.2.3'
 
@@ -44,6 +44,7 @@ test {
    }
 }
 
+
 task cucumberTest() {
     dependsOn assemble, testClasses
     doLast {
@@ -53,10 +54,33 @@ task cucumberTest() {
             //systemProperties['browser'] = browser
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = ['--plugin', 'rerun:target/failed.txt',
-                    '--glue', 'test.java.stepdefinition',
+                    'pretty','html:target/HTML/ConsolidateReport.html' ,
+                     //  '--tags', "${tags}",
+                    'src/test/resources',
+
+                     '--glue', 'stepdefinitions',
                     '--threads', 2,
-                    '--tags', "${tags}",
-                    'src/test/resources']
+                   ]
         }
     }
 }
+
+/*tasks {
+
+     val consoleLauncherTest by registering(JavaExec::class) {
+        dependsOn(testClasses)
+        def reportsDir = file("$buildDir/test-results")
+        outputs.dir(reportsDir)
+        classpath = sourceSets["test"].runtimeClasspath
+        main = "org.junit.platform.console.ConsoleLauncher"
+        args("--scan-classpath")
+        args("--include-engine", "cucumber")
+        args("--reports-dir", reportsDir)
+    }
+
+    test {
+        dependsOn(consoleLauncherTest)*/
+      //  exclude("**/*")
+   // }
+//}
+

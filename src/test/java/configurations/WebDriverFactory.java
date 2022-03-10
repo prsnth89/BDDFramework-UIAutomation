@@ -14,7 +14,7 @@ public class WebDriverFactory {
             System.setProperty("webdriver.chrome.driver", "drivers/98_chromedriver.exe");
             driver = new ChromeDriver();
             WebDriverExecutor.setWebDriver(driver);
-            driver = WebDriverExecutor.getDriver();
+            driver=WebDriverExecutor.getDriver();
         } else if (browserType.trim().toLowerCase().equalsIgnoreCase("ie")) {
             //  System.setProperty("webdriver.ie.driver","drivers/98_chromedriver.exe");
             WebDriverExecutor.setWebDriver(driver);
