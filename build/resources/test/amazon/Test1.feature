@@ -1,10 +1,10 @@
 @amazon
   Feature: Navigate to amazon
     Scenario Outline: amazon
-      Given open the given "<Browser>"
-      Then navigate to given url "<Url>"
-      And close the browser
+      Given navigate to given url of amazon
+      And validate the amazon page got loaded successfully by validating text "<VerifyText>"
+
       Examples:
-        | Browser | Url |
-        | Chrome  | https://www.amazon.com |
-       # | chrome      | https://www.flipkart.com |
+        | VerifyText |
+        | amazon     |
+        | test       |

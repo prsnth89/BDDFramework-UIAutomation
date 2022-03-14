@@ -12,8 +12,9 @@ repositories {
 }
 
 dependencies {
-      testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.jetbrains:annotations:23.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
    //cucumber-selenium-java dependencies
     implementation 'io.cucumber:cucumber-java:7.2.3'
 
@@ -29,6 +30,9 @@ dependencies {
 
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.2'
 
+     //managing object factory
+  //  testImplementation 'info.cukes:cucumber-picocontainer:1.2.6'
+
 
 }
 configurations {
@@ -38,7 +42,7 @@ configurations {
 }
 
 test {
-   // useJUnitPlatform()
+    useJUnitPlatform()
    manifest {
        attributes 'Main-Class': 'runner.TestRunner'
    }
@@ -51,11 +55,11 @@ task cucumberTest() {
             main = "io.cucumber.core.cli.Main"
             // systemProperties['configFileName'] = "env0_config.properties" (this is required for changing the environment in future)
             //systemProperties['browser'] = browser
-            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            classpath = configurations.cucumberRuntime +sourceSets.main.output +sourceSets.test.output
             args = ['--plugin', 'rerun:target/failed.txt',
-                    '--glue', 'test.java.stepdefinition',
-                    '--threads', 2,
-                    '--tags', "${tags}",
+                    '--glue', 'stepdefinitions',
+                    '--threads', 3,
+                   // '--tags', '@amazon or @google',
                     'src/test/resources']
         }
     }

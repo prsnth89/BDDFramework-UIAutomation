@@ -1,24 +1,77 @@
 package stepdefinitions;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
+import configurations.ParallelExecutor;
 import configurations.WebDriverFactory;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebDriver;
+import pages.AmazonPage;
 import pages.BasePage;
+import pages.GooglePage;
+import utils.Hooks;
 
-public class StepDefinition extends BasePage {
+public class StepDefinition {
+    BasePage basePage;
+    AmazonPage amazonPage;
+    GooglePage googlePage;
+    WebDriver driver;
+    ParallelExecutor parallelExecutor;
+    public  StepDefinition() {
+        System.out.println("Initialize step def");
+        basePage=new BasePage();
+       // this.driver=basePage.openBrowser("chrome");
+      //  basePage=new BasePage(ParallelExecutor.getDriver());
+        amazonPage =new AmazonPage();
+        googlePage=new GooglePage();
+        ParallelExecutor.printCurrentThread();
+    }
+
+@Before()
+public void openBrowser(){
+    ParallelExecutor.setWebDriver(basePage.openBrowser("chrome"));
+}
+
+    @After()
+    public void closeWebBrowser(){
+        System.out.println("After --close the driver");
+        ParallelExecutor.getDriver().close();
+
+    }
+
+
+
     @Given("open the given {string}")
     public void open_the_given(String browserType) {
-       openBrowser(browserType);
+
     }
-    @Then("navigate to given url {string}")
+    @Given("navigate to given url {string}")
     public void navigate_to_given_url(String url) {
-        navigateToURL(url);
-    }
 
-    @Then("close the browser")
-    public void close_the_browser() {
+    }
+    @Given("navigate to given url of amazon")
+    public void navigate_to_given_url_of_amazon() {
         // Write code here that turns the phrase above into concrete actions
-        closeBrowser();
+        amazonPage.navigateToAmazonPage();
     }
 
+    @And("validate the amazon page got loaded successfully by validating text {string}")
+    public void validate_the_amazon_page_got_loaded_successfully_by_validating_text(String textToValidate) {
+        // Write code here that turns the phrase above into concrete actions
+        amazonPage.verifyText(textToValidate);
     }
+
+    @Given("navigate to given url of google")
+    public void navigate_to_given_url_of_google() {
+        googlePage.navigateToGooglePage();
+    }
+    @Given("validate the google page got loaded successfully by validating text {string}")
+    public void validate_the_google_page_got_loaded_successfully_by_validating_text(String string) {
+        googlePage.verifyGooglePageLoaded();
+    }
+
+
+}

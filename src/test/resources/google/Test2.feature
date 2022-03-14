@@ -1,10 +1,11 @@
 @google
 
 Feature: Navigate to google
+
   Scenario Outline: google
-    Given open the given "<Browser>"
-    Then navigate to given url "<Url>"
-    And close the browser
+    Given navigate to given url of google
+    And validate the google page got loaded successfully by validating text "<VerifyText>"
+
     Examples:
-      | Browser | Url |
-      | chrome  | https://www.google.com |
+      | VerifyText |
+      | google   |

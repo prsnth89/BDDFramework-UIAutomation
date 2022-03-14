@@ -12,4 +12,9 @@ public class ParallelExecutor {
     public static WebDriver getDriver(){
         return webDriver.get();
     }
+
+    public static void printCurrentThread(){
+        System.out.println("Parallel executor--"+webDriver.get());
+
+    }
 }
