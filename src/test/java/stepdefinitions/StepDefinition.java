@@ -62,6 +62,7 @@ public void openBrowser(){
     public void validate_the_amazon_page_got_loaded_successfully_by_validating_text(String textToValidate) {
         // Write code here that turns the phrase above into concrete actions
         amazonPage.verifyText(textToValidate);
+        amazonPage.verifyAmazonDeliverToIsDisplayed();
     }
 
     @Given("navigate to given url of google")

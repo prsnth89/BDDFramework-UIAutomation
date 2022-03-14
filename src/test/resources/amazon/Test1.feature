@@ -8,3 +8,4 @@
         | VerifyText |
         | amazon     |
         | test       |
+        | amazon     |
