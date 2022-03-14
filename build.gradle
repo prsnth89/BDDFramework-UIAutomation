@@ -57,6 +57,7 @@ task cucumberTest() {
             //systemProperties['browser'] = browser
             classpath = configurations.cucumberRuntime +sourceSets.main.output +sourceSets.test.output
             args = ['--plugin', 'rerun:target/failed.txt',
+                    '--plugin', 'html:target/consolidatedgradle.html',
                     '--glue', 'stepdefinitions',
                     '--threads', 3,
                    // '--tags', '@amazon or @google',
