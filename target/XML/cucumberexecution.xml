@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="36.885">
+<testcase classname="Navigate to amazon" name="amazon" time="29.63">
+<system-out><![CDATA[Given open the given "Chrome"...............................................passed
+Then navigate to given url "https://www.amazon.com".........................passed
+And close the browser.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Navigate to google" name="google" time="6.902">
+<system-out><![CDATA[Given open the given "chrome"...............................................passed
+Then navigate to given url "https://www.google.com".........................passed
+And close the browser.......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

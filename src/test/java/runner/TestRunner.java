@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "html:target/HTML/ConsolidateReport.html",
                 "json:target/JSON/cucumber.json",
-                "junit:target/cucumberexecution.xml"}
+                "junit:target/XML/cucumberexecution.xml"}
       //  tags = "@amazon"
 )
 public class TestRunner {
