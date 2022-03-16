@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"pretty",
                 "html:target/HTML/ConsolidateReport.html",
                 "json:target/JSON/cucumber.json",
-                "rerun:target/failed.txt"
+                "rerun:target/failed_testcases.txt"
          }
       //  tags = "@amazon"
 )

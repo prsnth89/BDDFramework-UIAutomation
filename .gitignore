@@ -1,0 +1,6 @@
+*.idea
+*.html
+*.class
+*.xml
+*.json
+*build*
