@@ -42,7 +42,7 @@ configurations {
 }
 
 test {
-    useJUnitPlatform()
+  // useJUnitPlatform()
    manifest {
        attributes 'Main-Class': 'runner.TestRunner'
    }
@@ -61,7 +61,7 @@ task cucumberTest() {
                     '--glue', 'stepdefinitions',
                     '--threads', 3,
                    // '--tags', '@amazon or @google',
-                   // 'src/test/resources'
+                    'src/test/resources'
             ]
         }
     }

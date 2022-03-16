@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
         dryRun = false,
         plugin = {"pretty",
                 "html:target/HTML/ConsolidateReport.html",
-                "json:target/JSON/cucumber.json"}
+                "json:target/JSON/cucumber.json",
+                "rerun:target/failed.txt"
+         }
       //  tags = "@amazon"
 )
 public class TestRunner {
