@@ -61,7 +61,8 @@ task cucumberTest() {
                     '--glue', 'stepdefinitions',
                     '--threads', 3,
                    // '--tags', '@amazon or @google',
-                    'src/test/resources']
+                   // 'src/test/resources'
+            ]
         }
     }
 }

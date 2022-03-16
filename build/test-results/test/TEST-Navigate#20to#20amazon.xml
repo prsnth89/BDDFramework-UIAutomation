@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Navigate to amazon" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-16T19:22:23" hostname="LAPTOP-62EKUM01" time="47.107">
+  <properties/>
+  <testcase name="amazon" classname="Navigate to amazon" time="47.107">
+    <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at pages.BasePage.verifyTextFromGivenUrl(BasePage.java:48)
+	at pages.AmazonPage.verifyText(AmazonPage.java:18)
+	at stepdefinitions.StepDefinition.validate_the_amazon_page_got_loaded_successfully_by_validating_text(StepDefinition.java:67)
+	at ✽.validate the amazon page got loaded successfully by validating text &quot;test&quot;(file:///G:/automation/repository/cucumberseleniumapi/src/test/resources/amazon/Test1.feature:5)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+@amazon
+Scenario Outline: amazon                                                         ?[90m# src/test/resources/amazon/Test1.feature:10?[0m
+Initialize step def
+Parallel executor--null
+Navigated to url successfully
+  ?[32mGiven ?[0m?[32mnavigate to given url of amazon?[0m                                          ?[90m# stepdefinitions.StepDefinition.navigate_to_given_url_of_amazon()?[0m
+Current URL---https://www.amazon.com/
+TextToVerify---test
+  ?[31mAnd ?[0m?[31mvalidate the amazon page got loaded successfully by validating text ?[0m?[31m?[1m"test"?[0m ?[90m# stepdefinitions.StepDefinition.validate_the_amazon_page_got_loaded_successfully_by_validating_text(java.lang.String)?[0m
+      ?[31mjava.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at pages.BasePage.verifyTextFromGivenUrl(BasePage.java:48)
+	at pages.AmazonPage.verifyText(AmazonPage.java:18)
+	at stepdefinitions.StepDefinition.validate_the_amazon_page_got_loaded_successfully_by_validating_text(StepDefinition.java:67)
+	at âœ½.validate the amazon page got loaded successfully by validating text "test"(file:///G:/automation/repository/cucumberseleniumapi/src/test/resources/amazon/Test1.feature:5)
+?[0m
+Taking screenshot
+
+    Embedding image [image/png 345313 bytes]
+
+After --close the driver
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 57545
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1647458547.539][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
+Mar 16, 2022 8:22:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Mar 16, 2022 8:22:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
+Mar 16, 2022 8:22:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 99 of 97
+[1647458580.855][SEVERE]: Timed out receiving message from renderer: 10.000
+[1647458580.855][WARNING]: screenshot failed, retrying timeout: Timed out receiving message from renderer: 10.000
+]]></system-err>
+</testsuite>

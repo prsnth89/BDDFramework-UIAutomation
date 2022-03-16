@@ -8,4 +8,5 @@ Feature: Navigate to google
 
     Examples:
       | VerifyText |
+      | googleeee   |
       | google   |

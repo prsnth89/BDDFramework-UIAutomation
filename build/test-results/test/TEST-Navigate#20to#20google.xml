@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Navigate to google" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-16T19:23:10" hostname="LAPTOP-62EKUM01" time="11.685">
+  <properties/>
+  <testcase name="google" classname="Navigate to google" time="11.685"/>
+  <system-out><![CDATA[
+@google
+Scenario Outline: google                                                           ?[90m# src/test/resources/google/Test2.feature:11?[0m
+Initialize step def
+Parallel executor--ChromeDriver: chrome on WINDOWS (2116745ffc06e9c3a420da1707f3bcfb)
+Navigated to url successfully
+  ?[32mGiven ?[0m?[32mnavigate to given url of google?[0m                                            ?[90m# stepdefinitions.StepDefinition.navigate_to_given_url_of_google()?[0m
+Current URL---https://www.google.com/
+TextToVerify---google
+  ?[32mAnd ?[0m?[32mvalidate the google page got loaded successfully by validating text ?[0m?[32m?[1m"google"?[0m ?[90m# stepdefinitions.StepDefinition.validate_the_google_page_got_loaded_successfully_by_validating_text(java.lang.String)?[0m
+After --close the driver
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 98.0.4758.102 (273bf7ac8c909cde36982d27f66f3c70846a3718-refs/branch-heads/4758@{#1151}) on port 56469
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1647458592.995][WARNING]: This version of ChromeDriver has not been tested with Chrome version 99.
+Mar 16, 2022 8:23:14 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Mar 16, 2022 8:23:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 99, so returning the closest version found: 97
+Mar 16, 2022 8:23:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 99 of 97
+]]></system-err>
+</testsuite>

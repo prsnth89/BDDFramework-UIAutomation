@@ -6,6 +6,6 @@
 
       Examples:
         | VerifyText |
-        | amazon     |
+       # | amazon     |
         | test       |
-        | amazon     |
+      #  | amazon     |

@@ -1,1 +1,1 @@
-file:src/test/resources/amazon/Test1.feature:10
+classpath:amazon/Test1.feature:10
